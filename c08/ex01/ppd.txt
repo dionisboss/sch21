@@ -1,0 +1,8 @@
+#define - Defines a macro
+#undef - Undefines a Macro
+#include - Specifies the files to be included
+#ifdef - test for macro definition
+#endif - specifies the end of if
+#ifndif - tests wether a macro is not defined
+#if - tests a compile time condition
+#else  - specidies alternative when if test fails

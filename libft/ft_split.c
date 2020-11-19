@@ -55,7 +55,7 @@ static void		**ft_free(char **str)
     return (NULL);
 }
 
-static void		**engine(char *ss, int n_words, char c, char **str)
+static char 		**engine(char *ss, int n_words, char c, char **str)
 {
     int	run_arr;
     int run_word;
@@ -68,14 +68,14 @@ static void		**engine(char *ss, int n_words, char c, char **str)
             ss++;
         len_splited = len_str_split(ss, c);
         if (!(str[run_arr] = (char *)malloc(sizeof(*ss) * (len_splited + 1))))
-            return (ft_free(str));
+            return (char **)(ft_free(str));
         run_word = 0;
         while (run_word < len_splited)
             str[run_arr][run_word++] = *ss++;
         str[run_arr][run_word] = '\0';
     }
     str[run_arr] = NULL;
-    return (void **)(str);
+    return (str);
 }
 
 char			**ft_split(char const *s, char c)
